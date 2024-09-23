@@ -6,7 +6,8 @@ const userController = require("./controllers/user.controller")
 const app = express()
 const cors = require('cors');
 const viewurl = process.env.viewurl;
-const connect = require("./configs/db");
+const connectDB = require("./configs/db");
+connectDB();
 
 
 const corsOptions ={
@@ -27,8 +28,7 @@ app.get("/",(req,res)=>{
     return res.send("welcome on api server")
 })
 app.listen(process.env.PORT || 5432, async () => {
-    try {
-      await connect();
+    try {      
       console.log("listioning to port 5432");
     } catch (error) {
       console.log(error);
