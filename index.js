@@ -23,7 +23,9 @@ app.use(cors(corsOptions));
 app.use(express.json())
 
 app.use("", taskController,userController);
-
+app.get("/",(req,res)=>{
+    return res.send("welcome on api server")
+})
 app.listen(process.env.PORT || 5432, async () => {
     try {
       await connect();
