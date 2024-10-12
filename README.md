@@ -24,10 +24,10 @@ Manage App is a task management application built with React, Node.js, Express, 
    git clone https://github.com/your-username/manage-app.git
    cd manage-app
 2. Install dependencies for both client and server:
-# In the root directory
+In the root directory
 npm install
 
-# In the client directory
+In the client directory
 cd client
 npm install
 
@@ -38,6 +38,6 @@ npm install
      secretkey="type_your_secret_key"
      CLIENT_URL="type_your_frontend_url"
      connection="type_your_mongodb_connection_link"
-5. Start the application:
+4. Start the application:
    # In the root directory
    npm start
